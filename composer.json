@@ -1,0 +1,21 @@
+{
+    "name": "user/htdocs",
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DzianCPP",
+            "email": "denis.martynovich@innowise-group.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
