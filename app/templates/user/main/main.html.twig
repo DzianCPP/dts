@@ -1,6 +1,4 @@
 {% extends "_base.html.twig" %} {% block content %}
-<link rel="stylesheet" href="/assets/css/main_page/card_text.css">
-
 <div class="row bg-dark">
   <div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
     {% use "user/components/top_nav_bar.html.twig" %}
@@ -56,15 +54,6 @@
   <div class="row p-3">
     {% use "user/components/new_products.html.twig" %}
     {% block new_products %}
-    {{ parent() }}
-    {% endblock %}
-  </div>
-</div>
-
-<div class="container-fluid px-3 mx-0">
-  <div class="row p-3">
-    {% use "user/components/footer_block.html.twig" %}
-    {% block footer_block %}
     {{ parent() }}
     {% endblock %}
   </div>
