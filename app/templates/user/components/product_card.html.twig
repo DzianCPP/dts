@@ -97,6 +97,23 @@
                         mt-md-2 mt-sm-2 mt-2"><b>Купить</b></a>
                 </div>
             </div>
+            <div class="row w-100 mt-2">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12b">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle"
+                                type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Доп. услуги</button>
+                            <ul class="dropdown-menu">
+                                {% for service in services %}
+                                <li><button class="dropdown-item">{{ service.name }}{{ ': ' }}{{ service.price }}{{ ' BYN' }}</button></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <span type="text" class="input-group-text border-secondary bg-transparent border-0 w-25">Цена</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

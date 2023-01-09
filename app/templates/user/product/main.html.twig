@@ -26,6 +26,18 @@
   </div>
 </div>
 
+<div class="container-fluid px-3 mx-0">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-3 col-xl-3"></div>
+    <div class="col-xl-9 col-md-9 col-sm-12 col-xs-12 mt-3">
+      {% use "user/components/services_block.html.twig" %}
+      {% block services_block %}
+      {{ parent() }}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+
 <div class="container-fluid px-3 mx-0 mt-5">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
