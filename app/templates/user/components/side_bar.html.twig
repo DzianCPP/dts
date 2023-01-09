@@ -1,0 +1,101 @@
+{% block side_bar %}
+<div class="container-xl container-md container-sm container-xs rounded h-100">
+    <div class="row gx-0">
+        <button class="btn text-dark dropdown-toggle w-100" id="collapse-btn"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#catalogue" aria-controls="catalogue"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span>Каталог</span>
+        </button>
+    </div>
+    <div class="collapse gx-0" id="catalogue">
+        <div class="row">
+            <div class="btn-group dropend">
+                <button type="button" class="btn text-dark
+                    dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ноутбуки
+                </button>
+                <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item text-light" href="#">Apple</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Lenovo</a></li>
+                    <li><a class="dropdown-item text-light" href="#">MSI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-group dropend">
+                <button type="button" class="btn text-dark
+                    dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    ПК
+                </button>
+                <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item text-light" href="#">Intel</a></li>
+                    <li><a class="dropdown-item text-light" href="#">AMD</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-group dropend">
+                <button type="button" class="btn text-dark
+                    dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Клавиатуры
+                </button>
+                <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item text-light" href="#">Полноразмерные</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Мини</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Эргономичные</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-group dropend">
+                <button type="button" class="btn text-dark
+                    dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Мыши
+                </button>
+                <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item text-light" href="#">Обычные</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Мини</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Эргономичные</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-group dropend">
+                <button type="button" class="btn text-dark
+                    dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Наушники
+                </button>
+                <ul class="dropdown-menu bg-secondary">
+                    <li><a class="dropdown-item text-light" href="#">Накладные</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Вкладыши</a></li>
+                    <li><a class="dropdown-item text-light" href="#">Мониторные</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row gx-0">
+        <a type="button" class="btn text-dark position-relative">
+            Отложенные
+            <span class="badge bg-warning text-dark">
+                11
+            </span>
+        </a>
+        <a type="button" class="btn text-dark position-relative">
+            Корзина
+            <span class="badge bg-danger">
+                2
+            </span>
+        </a>
+        <p hidden id="current-widnow-size"></p>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/scripts/side_bar/expandOnLoad.js"></script>
+<script type="text/javascript" src="/assets/scripts/side_bar/expandOnResize.js"></script>
+{% endblock %}

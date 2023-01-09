@@ -1,0 +1,33 @@
+{% block ad_carousel %}
+<div class="container-xl container-md container-sm container-xs mx-0 h-100">
+    {% for i in 0..1 %}
+
+    <div class="card text-dark border-0">
+        <div class="row mb-1 h-50">
+            <div class="col-xl-4 col-md-6 col-sm-6 col-xs-12 rounded
+                bg-secondary" style="aspect-ratio: 5/2;
+                background-image:
+                url('https://cdn.pocket-lint.com/r/s/1201x/assets/images/143319-laptops-review-review-lenovo-thinkpad-x1-carbon-hdr-review-image1-dawkcj1vss.jpg');
+                background-size: cover;
+                background-position: center;"></div>
+            <div class="col-xl-8 col-md-6 col-sm-6 col-xs-12">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Lenovo ThinkPad X1 Carbon Gen7
+                    </h5>
+                    <p class="card-text">
+                        Новое поколение супер-портативных бизнес-ноутбуков.
+                        Теперь в
+                        нём новейший процессор Kaby Lake.</p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                            Продано 1000+ штук
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    {% endblock %}

@@ -1,0 +1,36 @@
+{% block top_nav_bar %}
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DTS</a>
+    <button class="navbar-toggler" id="navBar-collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item text-center">
+          <a class="btn btn-dark m-2 p-2" aria-current="page" href="#">О нас</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="btn btn-dark m-2 p-2" href="#">Доставка</a>
+        </li>
+        <li class="nav-item dropdown text-center">
+          <a class="btn btn-dark m-2 p-2 dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            +375-44-708-31-98
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item text-light" href="#">+375-17-666-66-66</a></li>
+            <li><a class="dropdown-item text-light" href="#">+375-29-299-29-29</a></li>
+          </ul>
+        </li>
+        <li class="nav-item text-center">
+          <a class="btn btn-dark m-2 p-2" href="#" tabindex="-1" aria-disabled="true">Контакты</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control m-1" type="search" placeholder="Искать по каталогу" aria-label="Search">
+        <button class="btn btn-outline-light text-light m-1" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{% endblock %}
