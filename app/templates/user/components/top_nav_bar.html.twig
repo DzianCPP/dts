@@ -1,7 +1,7 @@
 {% block top_nav_bar %}
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">DTS</a>
+    <a class="navbar-brand" href="/main">DTS</a>
     <button class="navbar-toggler" id="navBar-collapse-btn" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarScroll"
       aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle
@@ -12,22 +12,26 @@
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
         style="--bs-scroll-height: 100px;">
         <li class="nav-item text-center">
-          <a class="btn btn-dark m-2 p-2" aria-current="page" href="/about">О нас</a>
+          <a class="btn btn-dark m-2 p-2" aria-current="page" href="/about">О
+            нас</a>
         </li>
         <li class="nav-item text-center">
           <a class="btn btn-dark m-2 p-2" href="#">Доставка</a>
         </li>
         <li class="nav-item dropdown text-center">
-          <a class="btn btn-dark m-2 p-2 dropdown-toggle" href="#"
-            id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            +375-44-708-31-98
-          </a>
-          <ul class="dropdown-menu bg-dark"
-            aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item text-light" href="#">+375-17-666-66-66</a></li>
-            <li><a class="dropdown-item text-light" href="#">+375-29-299-29-29</a></li>
-          </ul>
+          <div>
+            <a class="btn btn-dark m-2 p-2 dropdown-toggle w-100" href="#"
+              id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              +375-44-708-31-98
+            </a>
+            <ul class="dropdown-menu mx-2 p-2 w-100"
+              aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="#">+375-17-666-66-66</a></li>
+              <li><a class="dropdown-item" href="#">+375-29-299-29-29</a></li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item text-center">
           <a class="btn btn-dark m-2 p-2" href="#" tabindex="-1"
