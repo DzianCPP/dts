@@ -1,0 +1,39 @@
+{% extends "_base.html.twig" %}
+{% block content %}
+<div class="row bg-dark">
+    <div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
+        {% use "user/components/top_nav_bar.html.twig" %}
+        {% block top_nav_bar %}
+        {{ parent() }}
+        {% endblock %}
+    </div>
+</div>
+
+<div class="container-fluid px-3 mx-0">
+    <div class="row">
+        <div class="col-xl-3 col-md-3 col-sm-12 col-xs-12 mt-3">
+            {% use "user/components/side_bar.html.twig" %}
+            {% block side_bar %}
+            {{ parent() }}
+            {% endblock %}
+        </div>
+        <div class="col-xl-9 col-md-9 col-sm-12 col-xs-12 mt-3">
+            {% use "user/components/store_gallery.html.twig" %}
+            {% block store_gallery %}
+            {{ parent() }}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-3 mx-0">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+            {% use "user/components/about_body.html.twig" %}
+            {% block about_body %}
+            {{ parent() }}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
