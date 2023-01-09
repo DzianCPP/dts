@@ -18,7 +18,7 @@
       {% endblock %}
     </div>
     <div class="col-xl-9 col-md-9 col-sm-12 col-xs-12 mt-3">
-      {% use "user/components/product_card.html.twig" %}
+      {% use "user/product/components/product_card.html.twig" %}
       {% block product_card %}
       {{ parent() }}
       {% endblock %}
@@ -29,27 +29,27 @@
 <div class="container-fluid px-3 mx-0 mt-5">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      {% use "user/components/product_body_tab_menu.html.twig" %}
+      {% use "user/product/components/product_body_tab_menu.html.twig" %}
       {% block product_body_tab_menu %}
       {{ parent() }}
       {% endblock %}
       <div class="tab-content" id="tab-content">
-        {% use "user/components/product_body_description.html.twig" %}
+        {% use "user/product/components/product_body_description.html.twig" %}
         {% block product_body_description %}
         {{ parent() }}
         {% endblock %}
 
-        {% use "user/components/product_body_characteristics.html.twig" %}
+        {% use "user/product/components/product_body_characteristics.html.twig" %}
         {% block product_body_characteristics %}
         {{ parent() }}
         {% endblock %}
 
-        {% use "user/components/product_body_delivery.html.twig" %}
+        {% use "user/product/components/product_body_delivery.html.twig" %}
         {% block product_body_delivery %}
         {{ parent() }}
         {% endblock %}
 
-        {% use "user/components/product_body_reviews.html.twig" %}
+        {% use "user/product/components/product_body_reviews.html.twig" %}
         {% block product_body_reviews %}
         {{ parent() }}
         {% endblock %}
