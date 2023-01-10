@@ -1,0 +1,50 @@
+{% block body_text %}
+{% set b = body_text %}
+<div class="container-fluid">
+    <div class="row w-100">
+        <div class="h1 text-center">{{ b.header }}</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100 mt-3">
+        <p class="text-left">{{ b.p1 }}</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100">
+        <div class="h5 text-left">{{ b.minsk }}</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100 mt-3">
+        <p class="text-left">{{ b.p2 }}</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100">
+        <div class="h5 text-left">{{ b.self_take }}</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100 mt-3">
+        <p class="text-left">{{ b.p3 }}</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100">
+        <div class="h5 text-left">{{ b.mail }}</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row w-100 mt-3">
+        <p class="text-left">{{ b.p4 }}</p>
+    </div>
+</div>
+{% endblock %}
