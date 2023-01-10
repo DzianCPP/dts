@@ -1,20 +1,17 @@
 {% block new_products %}
 <div class="h1 text-center mb-3">Новинки</div>
 <div class="card-group h-100">
-    {% for i in 0..3 %}
+    {% for n in new_products %}
 
     <div class="card h-100">
-        <div class="h-50 w-100 bg-secondary" style="aspect-ratio: 2/1;">
+        <div class="h-50 w-100 bg-secondary" style="background-image: url('{{ n.bg }}'); aspect-ratio: 5/2; background-position: center; background-size: cover;">
         </div>
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting
-                text below
-                as a natural lead-in to additional content. This content is a
-                little bit longer.</p>
+            <h5 class="card-title">{{ n.name }}</h5>
+            <p class="card-text">{{ n.description }}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">{{ n.offer }}</small>
         </div>
     </div>
 

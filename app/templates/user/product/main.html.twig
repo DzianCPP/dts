@@ -34,23 +34,8 @@
       {{ parent() }}
       {% endblock %}
       <div class="tab-content" id="tab-content">
-        {% use "user/product/components/product_body_description.html.twig" %}
-        {% block product_body_description %}
-        {{ parent() }}
-        {% endblock %}
-
-        {% use "user/product/components/product_body_characteristics.html.twig" %}
-        {% block product_body_characteristics %}
-        {{ parent() }}
-        {% endblock %}
-
-        {% use "user/product/components/product_body_delivery.html.twig" %}
-        {% block product_body_delivery %}
-        {{ parent() }}
-        {% endblock %}
-
-        {% use "user/product/components/product_body_reviews.html.twig" %}
-        {% block product_body_reviews %}
+        {% use "user/product/components/tabs_content.html.twig" %}
+        {% block tabs_content %}
         {{ parent() }}
         {% endblock %}
       </div>

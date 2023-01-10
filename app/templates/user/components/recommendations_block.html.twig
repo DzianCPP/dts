@@ -1,16 +1,14 @@
 {% block recommendations %}
-{% for i in 0..3 %}
+{% for recommendation in recommendations %}
+{% set r = recommendation %}
 
 <div class="col h-100 mb-2">
-    <div class="h-50 w-100 rounded bg-secondary" style="aspect-ratio: 2/1; background-image: url('https://cdn.mos.cms.futurecdn.net/KhPnpYcKr3i2fMkWRKBKch.jpg'); background-size: cover; background-position: center;">
+    <div class="h-50 w-100 rounded bg-secondary" style="aspect-ratio: 2/1; background-image: url('{{ r.bg }}'); background-size: cover; background-position: center;">
     </div>
     <div class="card border-0 h-50">
         <div class="card-body h-100">
-            <h5 class="card-title">MacBook Air 2020</h5>
-            <p class="card-text">This is a longer card with supporting
-                text
-                below as a natural lead-in to additional content. This
-                content is a little bit longer.</p>
+            <h5 class="card-title">{{ r.name }}</h5>
+            <p class="card-text">{{ r.description }}</p>
             <div class="input-group w-75 m-auto">
                 <a href="" class="btn btn-success w-100">Заказать</a>
             </div>

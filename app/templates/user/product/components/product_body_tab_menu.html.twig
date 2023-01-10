@@ -1,16 +1,11 @@
 {% block product_body_tab_menu %}
 <ul class="nav nav-tabs" role="tablist">
+    {% for tab in tabs %}
     <li class="nav-item" role="presentation">
-        <button class="nav-link show active text-dark" aria-current="page" id="tab-description" data-bs-toggle="tab" data-bs-target="#description-tab-pane" type="button" role="tab" aria-controls="description-tab-pane" aria-selected="true">Описание</button>
+        <button class="nav-link show {{ tab.active }} text-dark" aria-current="page" id="tab-{{ tab.name }}" data-bs-toggle="tab" data-bs-target="#{{ tab.name }}-tab-pane" type="button" role="tab" aria-controls="description-tab-pane" aria-selected="true">
+            {{ tab.body }}
+        </button>
     </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link show text-dark" id="tab-characteristics" data-bs-toggle="tab" data-bs-target="#characteristics-tab-pane" type="button" role="tab" aria-controls="characteristics-tab-pane" aria-selected="true">Характеристики</button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link show text-dark" id="tab-delivery" data-bs-toggle="tab" data-bs-target="#delivery-tab-pane" type="button" role="tab" aria-controls="delivery-tab-pane" aria-selected="true">Доставка</button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <data-b class="nav-link show text-dark" id="tab-reviews" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane" type="button" role="tab" aria-controls="reviews-tab-pane" aria-selected="true">Характеристики</button>
-    </li>
+    {% endfor %}
 </ul>
 {% endblock %}

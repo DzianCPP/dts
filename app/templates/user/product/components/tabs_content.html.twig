@@ -1,0 +1,10 @@
+{% block tabs_content %}
+{% for tc in tabs_content %}
+<div class="tab-pane show {{ tc.active }}" id="{{ tc.id }}-tab-pane" role="tabpanel"
+    aria-labelledby="home-tab" tabindex="0">
+    <p>
+        {{ tc.body }}
+    </p>
+</div>
+{% endfor %}
+{% endblock %}

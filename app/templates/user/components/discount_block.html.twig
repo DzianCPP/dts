@@ -1,19 +1,16 @@
 {% block discount %}
 <div class="col h-100 mb-2">
     <div class="card h-100">
-    <div class="card-header text-center h5">СКИДКА!</div>
-    <div class="h-50 w-100 bg-warning" style="aspect-ratio: 7/2; background-image: url('https://images.macrumors.com/t/q-5kInZZC0CU3HsHL3HyBIHYWKQ=/1600x0/article-new/2022/06/M2-MacBook-Air-2022-Feature0012.jpg');
+    <div class="card-header text-center h5">{{ discount_block.header }}</div>
+    <div class="h-50 w-100 bg-warning" style="aspect-ratio: 7/2; background-image: url('{{ discount_block.bg }}');
     background-size: cover;
     background-position: center;">
     </div>
         <div class="card-body h-100">
-            <h5 class="card-title">MacBook Air 2020</h5>
-            <p class="card-text">This is a longer card with supporting
-                text
-                below as a natural lead-in to additional content. This
-                content is a little bit longer.</p>
+            <h5 class="card-title">{{ discount_block.product_name }}</h5>
+            <p class="card-text">{{ discount_block.product_description }}</p>
             <div class="input-group w-75 m-auto">
-                <span class="input-group-text bg-light justify-content-center w-50">Скидка 50%</span>
+                <span class="input-group-text bg-light justify-content-center w-50">Скидка {{ discount_block.discount_size }}%</span>
                 <a href="" class="btn btn-success w-50">Заказать</a>
             </div>
         </div>

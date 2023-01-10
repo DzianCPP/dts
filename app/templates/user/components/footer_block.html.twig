@@ -6,42 +6,16 @@
   <div class="card-body">
     <div class="row w-100">
 
-      {% for i in 0..3 %}
+      {% for fb in footer_blocks %}
       <div class="col-xs-12 col-sm-12 col-md-6 col-xl-3 rounded text-dark mx-0 w-sm-auto w-md-auto w-xl-auto">
-        <div class="h5 text-center w-100">Блок футера</div>
+        <div class="h5 text-center w-100">{{ fb.header }}</div>
         <div class="btn-group-vertical w-100">
-          <div><a class="btn btn-outline-dark border-0 py-auto">Ссылка</a></div>
-          <div><a class="btn btn-outline-dark border-0 py-auto">Ссылка</a></div>
-          <div><a class="btn btn-outline-dark border-0 py-auto">Ссылка</a></div>
+          {% for l in fb.links %}
+            <div><a class="btn btn-outline-dark border-0 py-auto" href="/{{ l }}">{{ l }}</a></div>
+          {% endfor %}
         </div>
       </div>
       {% endfor %}
-      {# <div class="col-xs-12 col-sm-12 col-md-6 col-xl-3 rounded text-dark mx-0 w-sm-auto w-md-auto w-xl-auto">
-        <div class="h5 text-center w-100">Сервис</div>
-          <div class="btn-group-vertical w-100">
-            <div><a class="btn btn-outline-dark border-0 py-auto">Служба поддержки</a></div>
-            <div><a class="btn btn-outline-dark border-0 py-auto">Сервис и гарантия</a></div>
-            <div><a class="btn btn-outline-dark border-0 py-auto">Ремонт</a></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-3 rounded text-dark mx-0 w-sm-auto w-md-auto w-xl-auto">
-          <div class="h5 text-center w-100">Дополнительно</div>
-          <div class="btn-group-vertical w-100">
-            <div><a class="btn btn-outline-dark border-0 py-auto">Скидки</a></div>
-            <div><a class="btn btn-outline-dark border-0 py-auto">Условия соглашения</a></div>
-            <div><a class="btn btn-outline-dark border-0 py-auto">Политика безопасности</a></div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-3 rounded text-dark mx-0 w-sm-auto w-md-auto w-xl-auto">
-          <div class="h5 text-center w-100">Личные данные</div>
-          <div class="btn-group-vertical w-100">
-            <div><a class="btn btn-outline-dark border-0 py-auto">Личный кабинет</a></div>
-            <div><a class="btn btn-outline-dark border-0 py-auto">Корзина</a></div>
-            <div><a class="btn btn-outline-dark border-0 py-auto">Отложенные</a></div>
-          </div>
-        </div>
-      </div>
-    </div> #}
   </div>
 </div>
 {% endblock %}

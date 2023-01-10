@@ -16,27 +16,15 @@
                         data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    {% for photo in product.photos %}
+                    <div class="carousel-item {{ photo.active }}">
                         <div class="rounded w-100 h-100
                             bg-secondary" style="aspect-ratio: 16/9;
-                            background-color: darkgrey;
+                            background-image: url('{{ photo.bg }}');
                             background-size: cover;
                             background-position: center;"></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="rounded w-100 h-100
-                            bg-warning" style="aspect-ratio: 16/9;
-                            background-color: red;
-                            background-size: cover;
-                            background-position: center;"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="rounded w-100 h-100
-                            bg-danger" style="aspect-ratio: 16/9;
-                            background-color: blue;
-                            background-size: cover;
-                            background-position: center;"></div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button"
                     data-bs-target="#carouselExampleIndicators"
@@ -54,11 +42,9 @@
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-xl-8">
             <h5 class="card-title">
-                Имя товара
+                {{ product.name }}
             </h5>
-            <p class="card-text">
-                Описание товара описание товара описание товара описание товара
-                описание товара описание товара описание товара</p>
+            <p class="card-text">{{ product.description }}</p>
             <p class="card-text">
             </p>
         </div>
@@ -67,10 +53,10 @@
         <div class="col-12 col-sm-12 col-md-6 col-xl-4">
             <button type="button" class="btn btn-outline-success border-0
                 position-relative w-100 h-100">
-                <b>Текущая цена</b>
+                <b>{{ product.current_price }}</b>
                 <span class="position-absolute top-0 start-50 translate-middle
                     badge rounded-pill bg-danger">
-                    <del>Старая цена</del>
+                    <del>{{ product.old_price }}</del>
                 </span>
             </button>
         </div>
@@ -78,7 +64,7 @@
             <div class="row w-100 mt-2">
                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3">
                     <span class="bg-transparent border-0
-                        text-dark text-center">В наличии</span>
+                        text-dark text-center">{{ product.available }}</span>
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-5">
                     <div class="input-group">

@@ -16,10 +16,10 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Ноутбуки
                 </button>
-                <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item text-light" href="#">Apple</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Lenovo</a></li>
-                    <li><a class="dropdown-item text-light" href="#">MSI</a></li>
+                <ul class="dropdown-menu">
+                    {% for lp in laptop_producers %}
+                        <li><a class="dropdown-item" href="/{{ lp }}">{{ lp }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -30,9 +30,10 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     ПК
                 </button>
-                <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item text-light" href="#">Intel</a></li>
-                    <li><a class="dropdown-item text-light" href="#">AMD</a></li>
+                <ul class="dropdown-menu">
+                    {% for pp in pc_producers %}
+                    <li><a class="dropdown-item" href="/{{ pp }}">{{ pp }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -43,10 +44,10 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Клавиатуры
                 </button>
-                <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item text-light" href="#">Полноразмерные</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Мини</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Эргономичные</a></li>
+                <ul class="dropdown-menu">
+                    {% for kb in keyboards %}
+                        <li><a class="dropdown-item" href="/{{ kb }}">{{ kb }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -57,10 +58,10 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Мыши
                 </button>
-                <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item text-light" href="#">Обычные</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Мини</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Эргономичные</a></li>
+                <ul class="dropdown-menu">
+                    {% for mouse in mice %}
+                        <li><a class="dropdown-item" href="/{{ mouse }}">{{ mouse }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -71,10 +72,10 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Наушники
                 </button>
-                <ul class="dropdown-menu bg-secondary">
-                    <li><a class="dropdown-item text-light" href="#">Накладные</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Вкладыши</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Мониторные</a></li>
+                <ul class="dropdown-menu">
+                    {% for hp in headphones %}
+                        <li><a class="dropdown-item" href="/{{ hp }}">{{ hp }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

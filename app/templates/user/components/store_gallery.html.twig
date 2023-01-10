@@ -1,5 +1,5 @@
 {% block store_gallery %}
-<div id="carouselExampleIndicators" class="carousel slide">
+<div id="carouselExampleIndicators" class="carousel slide w-75">
     <div class="carousel-indicators">
         <button type="button"
             data-bs-target="#carouselExampleIndicators"
@@ -13,27 +13,16 @@
             data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active">
+        {% for sp in store_photos %}
+        <div class="carousel-item {{ sp.active }}">
             <div class="rounded
-                bg-secondary" style="aspect-ratio: 7/2;
-                background-color: darkgrey;
+                bg-secondary" style="aspect-ratio: 7/3;
+                background-image: url('{{ sp.bg }}');
                 background-size: cover;
-                background-position: center;"></div>
+                background-position: center;">
+            </div>
         </div>
-        <div class="carousel-item">
-            <div class="rounded
-                bg-warning" style="aspect-ratio: 7/2;
-                background-color: red;
-                background-size: cover;
-                background-position: center;"></div>
-        </div>
-        <div class="carousel-item">
-            <div class="rounded
-                bg-danger" style="aspect-ratio: 7/2;
-                background-color: blue;
-                background-size: cover;
-                background-position: center;"></div>
-        </div>
+        {% endfor %}
     </div>
     <button class="carousel-control-prev" type="button"
         data-bs-target="#carouselExampleIndicators"
