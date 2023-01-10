@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use src\helpers\DataToRenderFormer;
 
 class MainPageController extends AbstractController
 {
@@ -49,7 +50,7 @@ class MainPageController extends AbstractController
 
         ];
 
-        $laptop_producers = ["Apple", "Lenovo", "MSI", "DELL", "ASUS"];
+        $laptop_producers = ["Apple", "Lenovo"];
         $pc_producers = ["Lenovo", "Apple", "Asus"];
         $keyboards = ["Logitech", "SVEN", "Defender", "Apple"];
         $mice = ["Logitech", "SVEN", "Defender", "Apple"];
@@ -75,6 +76,8 @@ class MainPageController extends AbstractController
             'headphones' => $headphones,
             'footer_blocks' => $footer_blocks
         ];
+        $data = DataToRenderFormer::addCategories($data);
+
         
         return $this->render('user/main/main.html.twig', $data);
     }

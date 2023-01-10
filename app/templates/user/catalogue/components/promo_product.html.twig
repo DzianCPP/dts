@@ -1,0 +1,58 @@
+{% block promo_product %}
+<div class="container-xl container-md container-sm container-xs mx-0 h-100">
+    <div class="card text-dark border-0">
+        <div class="row mb-1 h-100">
+            <div class="col-xl-4 col-md-6 col-sm-6 col-xs-12 rounded
+                bg-secondary" style="aspect-ratio: 5/4;
+                background-image: url('{{ promo_product.ad_bg }}');
+                background-size: cover;
+                background-position: center;"></div>
+            <div class="col-xl-8 col-md-6 col-sm-6 col-xs-12">
+                <div class="row h-75">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {{promo_product.product_name }}
+                        </h5>
+                        <p class="card-text">
+                            {{ promo_product.product_description }}</p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Продано {{ promo_product.product_times_bought
+                                }}+ штук
+                            </small>
+                        </p>
+                    </div>
+                </div>
+                <div class="row h-25">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <button type="button" class="btn btn-outline-success
+                            position-relative w-100 h-100">
+                            <b>{{ promo_product.current_price }} BYN</b>
+                            <span class="position-absolute top-0 start-50
+                                translate-middle
+                                badge rounded-pill bg-danger">
+                                <del>{{ promo_product.old_price }} BYN</del>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-group w-100 h-100 mt-2 mt-sm-2 mt-md-0 mt-lg-0 mt-xl-0">
+                            <div class="input-group h-100 w-50">
+                                <button class="btn btn-outline-secondary">
+                                    <span>-</span>
+                                </button>
+                                <input type="text" class="form-control
+                                    border-secondary">
+                                <button class="btn btn-outline-success">
+                                    <span>+</span>
+                                </button>
+                            </div>
+                            <button type="button" class="btn btn-success
+                                position-relative h-100 w-50">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

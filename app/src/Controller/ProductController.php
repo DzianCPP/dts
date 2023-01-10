@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use src\helpers\DataToRenderFormer;
 
 class ProductController extends AbstractController
 {
@@ -31,7 +32,7 @@ class ProductController extends AbstractController
             [ 'name' => 'Lenovo Legion', 'bg' => 'https://static.lenovo.com/ww/campaigns/2022/legion-brand/lenovo-campaign-legion-brand-agnostic-feature-2-5-series.jpg', 'description' => "Lenovo Legion - это линейка игровых ноутбуков, которую китайский производитель успешно развивает на протяжении нескольких последних лет. Очередным ее пополнением стал Lenovo Legion 5 15ACH6A, который оснащен процессором AMD Ryzen 5 5600H на базе архитектуры Zen3 и видеокартой AMD Radeon RX 6600M с 8 ГБ видеопамяти."]
         ];
 
-        $laptop_producers = ["Apple", "Lenovo", "MSI", "DELL", "ASUS"];
+        $laptop_producers = ["Apple", "Lenovo"];
         $pc_producers = ["Lenovo", "Apple", "Asus"];
         $keyboards = ["Logitech", "SVEN", "Defender", "Apple"];
         $mice = ["Logitech", "SVEN", "Defender", "Apple"];
@@ -87,6 +88,9 @@ class ProductController extends AbstractController
             'discount_block' => $discount_block,
             'product' => $product
         ];
+
+        $data = DataToRenderFormer::addCategories($data);
+
         
         return $this->render('user/product/main.html.twig', $data);
     }

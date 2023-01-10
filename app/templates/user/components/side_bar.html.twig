@@ -9,76 +9,22 @@
         </button>
     </div>
     <div class="collapse gx-0" id="catalogue">
+        {% for cat in categories %}
         <div class="row">
-            <div class="btn-group dropend">
+            <div class="btn-group dropdown">
                 <button type="button" class="btn text-dark
                     dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    Ноутбуки
+                    {{ cat.name }}
                 </button>
-                <ul class="dropdown-menu">
-                    {% for lp in laptop_producers %}
-                        <li><a class="dropdown-item" href="/{{ lp }}">{{ lp }}</a></li>
+                <ul class="dropdown-menu w-75">
+                    {% for p in cat.producers %}
+                        <li><a class="dropdown-item" href="/catalogue/{{ cat.slug }}/{{ p }}">{{ p }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="btn-group dropend">
-                <button type="button" class="btn text-dark
-                    dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    ПК
-                </button>
-                <ul class="dropdown-menu">
-                    {% for pp in pc_producers %}
-                    <li><a class="dropdown-item" href="/{{ pp }}">{{ pp }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="btn-group dropend">
-                <button type="button" class="btn text-dark
-                    dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Клавиатуры
-                </button>
-                <ul class="dropdown-menu">
-                    {% for kb in keyboards %}
-                        <li><a class="dropdown-item" href="/{{ kb }}">{{ kb }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="btn-group dropend">
-                <button type="button" class="btn text-dark
-                    dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Мыши
-                </button>
-                <ul class="dropdown-menu">
-                    {% for mouse in mice %}
-                        <li><a class="dropdown-item" href="/{{ mouse }}">{{ mouse }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="btn-group dropend">
-                <button type="button" class="btn text-dark
-                    dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Наушники
-                </button>
-                <ul class="dropdown-menu">
-                    {% for hp in headphones %}
-                        <li><a class="dropdown-item" href="/{{ hp }}">{{ hp }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="row gx-0">
         <a type="button" class="btn text-dark position-relative">

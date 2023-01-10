@@ -1,0 +1,33 @@
+{% block layout_managers %}
+<div class="row w-100 mt-3 rounded">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="dropdown w-100">
+            <a class="btn dropdown-toggle btn-outline-secondary text-dark w-100" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Сортировка
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">От дешевого к дорогому</a></li>
+                <li><a class="dropdown-item" href="#">От дорого к дешевому</a></li>
+                <li><a class="dropdown-item" href="#">По популярности</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <div class="dropdown w-100">
+            <a class="btn dropdown-toggle btn-outline-secondary text-dark w-100" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                На странице
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">8</a></li>
+                <li><a class="dropdown-item" href="#">16</a></li>
+                <li><a class="dropdown-item" href="#">32</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-2 mt-sm-2 mt-md-2 mt-lg-0 mt-xl-0">
+        <div class="btn btn-outline-secondary w-100">Фильтры</div>
+    </div>
+</div>
+{% endblock %}

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use src\helpers\DataToRenderFormer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,7 +18,7 @@ class AboutController extends AbstractController
             [ 'bg' => "https://fotomix.by/image/cachewebp/catalog/photo/shop-photo/banners/02-858x298.webp", 'active' => '']
         ];
 
-        $laptop_producers = ["Apple", "Lenovo", "MSI", "DELL", "ASUS"];
+        $laptop_producers = ["Apple", "Lenovo"];
         $pc_producers = ["Lenovo", "Apple", "Asus"];
         $keyboards = ["Logitech", "SVEN", "Defender", "Apple"];
         $mice = ["Logitech", "SVEN", "Defender", "Apple"];
@@ -59,6 +60,8 @@ class AboutController extends AbstractController
             'headphones' => $headphones,
             'footer_blocks' => $footer_blocks
         ];
+
+        $data = DataToRenderFormer::addCategories($data);
 
         return $this->render('user/about/main.html.twig', $data);
     }
