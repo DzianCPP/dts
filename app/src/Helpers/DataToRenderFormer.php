@@ -152,4 +152,23 @@ class DataToRenderFormer
         
         return $data;
     }
+
+    public static function &addContactsBody(array &$data): array
+    {
+        $data['contacts_body'] = [
+            'header' => "Контакты магазина",
+            'p1' => "Телефоны для связи: +375 (29) 760-22-22, +375 (29) 630-22-22, +375 (29) 860-00-00, +375 (29) 166-66-00, +375 (25) 760-00-00, +375 (17) 392-73-50",
+            'mail_us' => "Написать нам:",
+            'p2' => "dts@gmail.com",
+            'address' => "Адрес магазина:",
+            'p3' => "г. Минск, ул. Киселёва 4, вывеска FOTOMIX  (ст.м. Площадь Победы).",
+            'worktime' => "Время работы:",
+            'p4' => "Пн-Cб – 10.00-19.00, Вс - Выходной.",
+            'order_time' => "Заказ через сайт:",
+            'p5' => "круглосуточно.",
+            'store_photo' => "https://fotomix.by/image/catalog/photo/shop-photo/shop-front-02.jpg"
+        ];
+        
+        return $data;
+    }
 }
