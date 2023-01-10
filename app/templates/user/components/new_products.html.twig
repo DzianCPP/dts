@@ -4,14 +4,19 @@
     {% for n in new_products %}
 
     <div class="card h-100">
-        <div class="h-50 w-100 bg-secondary" style="background-image: url('{{ n.bg }}'); aspect-ratio: 5/2; background-position: center; background-size: cover;">
+        <div class="h-50 w-100 bg-secondary" style="background-image: url('{{
+            n.bg }}'); aspect-ratio: 5/2; background-position: center;
+            background-size: cover;">
         </div>
         <div class="card-body">
             <h5 class="card-title">{{ n.name }}</h5>
             <p class="card-text">{{ n.description }}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">{{ n.offer }}</small>
+            <div class="input-group w-100 m-auto h-100">
+                <span class="text-muted input-gorup-text w-50 h-100">{{ n.offer }}</span>
+                <a href="" class="btn btn-success w-50 rounded text-center h-100">Заказать</a>
+            </div>
         </div>
     </div>
 
